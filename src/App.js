@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import logo, { ReactComponent } from './logo.svg';
 import './App.css';
+import WeatherDetail from './components/WeatherDetail'
+import Hello from './components/Hello'
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
+import ParentComponent from './components/ParentComponent';
+import WeatherInfoComponent from './components/WeatherInfoComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+   render() {
+      return <div className="App">
+        {/* <WeatherDetail city='Bangalore'>  
+          <p>namma Bangalore</p>
+        </WeatherDetail>
+        <Hello city='Pune'/>
+        <ParentComponent/>   */}
+
+        {/* <FunctionClick/>
+        <ClassClick/> */}
+        <WeatherInfoComponent/>
+        
+
+    </div>    
+  }
 }
 
 export default App;
